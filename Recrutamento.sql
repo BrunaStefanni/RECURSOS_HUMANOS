@@ -115,9 +115,17 @@ descricao VARCHAR (500)
 );
 
 CREATE TABLE formacao(
-
+id_formacao INT PRIMARY KEY,
+id_candidato INT,
+FK
+instituicao VARCHAR (50),
+curso VARCHAR (50),
+grau INT,
+data_inicio DATE,
+data_fim DATE
 );
 
 CREATE TABLE historico_candidatura(
+id_historico INT PRIMARY KEY,
 
 );
