@@ -89,15 +89,29 @@ descricao VARCHAR (500)
 );
 
 CREATE TABLE candidato_qualificacao(
-
+id_candidato INT,
+FK
+id_qualificacao INT,
+FK
+nivel VARCHAR (50)
 );
 
 CREATE TABLE vaga_qualificacao(
-
+id_vaga INT,
+FK
+id_qualificacao INT,
+FK
+nivel_minimo VARCHAR (50)
 );
 
 CREATE TABLE experiencia_profissional(
-
+id_experiencia INT PRIMARY KEY,
+id_candidato INT,
+FK
+empresa VARCHAR (50),
+data_inicio DATE,
+data_fim DATE,
+descricao VARCHAR (500)
 );
 
 CREATE TABLE formacao(
