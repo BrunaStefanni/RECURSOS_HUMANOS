@@ -127,5 +127,10 @@ data_fim DATE
 
 CREATE TABLE historico_candidatura(
 id_historico INT PRIMARY KEY,
-
+id_candidatura INT,
+FK
+id_estado INT,
+FK
+data_alteracao DATE,
+observacao VARCHAR (100)
 );
