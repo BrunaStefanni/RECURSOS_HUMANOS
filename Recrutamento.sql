@@ -9,7 +9,7 @@ nome_candidato VARCHAR (50),
 email VARCHAR (50),
 telefone INT,
 data_nascimento DATE,
-data_registro DATE,
+data_registro DATE
 );
 
 CREATE TABLE empresa(
@@ -18,7 +18,7 @@ nome_empresa VARCHAR (50),
 nif INT,
 email VARCHAR (50),
 telefone INT,
-website VARCHAR (100),
+website VARCHAR (100)
 );
 
 CREATE TABLE recrutador(
@@ -34,7 +34,7 @@ CREATE TABLE localizacao(
 id_localizacao INT PRIMARY KEY,
 cidade VARCHAR (50),
 distrito VARCHAR (50),
-pais VARCHAR (50),
+pais VARCHAR (50)
 );
 
 CREATE TABLE vaga(
@@ -54,16 +54,38 @@ id_localizacao INT,
 FK
 );
 
-CREATE TABLE candidatura(
+CREATE TABLE estado_candidatura(
+id_estado INT PRIMARY KEY,
+descricao VARCHAR (50)
+);
 
+CREATE TABLE candidatura(
+id_candidatura INT PRIMARY KEY,
+data_candidatura DATE,
+salario_pretendido DECIMAL (10,2),
+carta_apresentacao VARCHAR (500),
+id_candidato INT,
+FK
+id_vaga INT,
+FK
+id_estado INT,
+FK
 );
 
 CREATE TABLE entrevista(
-
+id_entrevista INT PRIMARY KEY,
+data_entrevista DATE,
+tipo VARCHAR (50),
+observacoes VARCHAR (50),
+avaliacao INT,
+id_candidatura INT,
+FK
 );
 
 CREATE TABLE qualificacao(
-
+id_qualificacao INT PRIMARY KEY,
+nome_qualificacao VARCHAR (50),
+descricao VARCHAR (500)
 );
 
 CREATE TABLE candidato_qualificacao(
@@ -79,10 +101,6 @@ CREATE TABLE experiencia_profissional(
 );
 
 CREATE TABLE formacao(
-
-);
-
-CREATE TABLE estado_candidatura(
 
 );
 
