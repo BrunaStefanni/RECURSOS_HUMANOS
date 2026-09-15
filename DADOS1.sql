@@ -63,7 +63,8 @@ VALUES
 ('Engenheiro de Automação', 'Programação de PLCs e acompanhamento de processos industriais automatizados.', '2026-08-25', '2026-10-15', 2200.00, 3000.00, 'Sem Termo'),
 ('UX/UI Designer', 'Prototipagem de ecrãs, realização de testes de usabilidade e design de produto.', '2026-08-28', '2026-09-30', 1700.00, 2300.00, 'A Termo Certo');
 
-INSERT INTO estado_candidatura (descricao) VALUES
+INSERT INTO estado_candidatura (descricao) 
+VALUES
 ('Recebida'),
 ('Em Análise'),
 ('Triagem Telefónica'),
@@ -75,7 +76,8 @@ INSERT INTO estado_candidatura (descricao) VALUES
 ('Rejeitada'),
 ('Candidato Desistiu');
 
-INSERT INTO candidatura (data_candidatura, salario_pretendido, carta_apresentacao) VALUES
+INSERT INTO candidatura (data_candidatura, salario_pretendido, carta_apresentacao) 
+VALUES
 ('2026-08-05', 2800.00, 'Tenho sólida experiência em desenvolvimento C# e bases de dados SQL Server, com interesse em arquiteturas orientadas a objetos.'),
 ('2026-08-08', 2100.00, 'Tenho grande interesse em aplicar modelação preditiva e análise de dados para otimização de processos de negócio.'),
 ('2026-08-10', 2300.00, 'Apresento vasta experiência no processamento e análise estatística de dados complexos em R, além de metodologia rigorosa.'),
@@ -87,7 +89,8 @@ INSERT INTO candidatura (data_candidatura, salario_pretendido, carta_apresentaca
 ('2026-08-29', 1900.00, 'Foco a minha atuação na criação de protótipos funcionais e na melhoria contínua da experiência do utilizador.'),
 ('2026-08-14', 3000.00, 'Apresento sólidos conhecimentos de engenharia de software e interesse em evoluir na criação de serviços de alto desempenho.');
 
-INSERT INTO entrevista (data_entrevista, tipo, observacoes, avaliacao) VALUES
+INSERT INTO entrevista (data_entrevista, tipo, observacoes, avaliacao) 
+VALUES
 ('2026-08-12 10:00:00', 'Técnica', 'Demonstrou forte domínio de Programação Orientada a Objetos em C# e boas práticas de arquitetura SQL.', 5),
 ('2026-08-14 14:30:00', 'Presencial', 'Apresentou excelente raciocínio lógico e experiência sólida em análise preditiva de dados.', 4),
 ('2026-08-18 11:00:00', 'Online', 'Perfil com rigor metodológico exemplar e grande autonomia em processamento estatístico de dados.', 5),
@@ -99,7 +102,8 @@ INSERT INTO entrevista (data_entrevista, tipo, observacoes, avaliacao) VALUES
 ('2026-09-02 11:30:00', 'Online', 'Apresentou um portfólio de UX/UI consistente, com boa fundamentação em testes de usabilidade.', 4),
 ('2026-08-17 15:30:00', 'Técnica', 'Respondeu bem às questões teóricas de engenharia de software, contudo o perfil de pretensão salarial ficou desalinhado.', 3);
 
-INSERT INTO qualificacao (nome_qualificacao, descricao) VALUES
+INSERT INTO qualificacao (nome_qualificacao, descricao) 
+VALUES
 ('Programação C#', 'Técnica'),
 ('SQL & Modelação de Dados', 'Técnica'),
 ('Análise Estatística em R', 'Técnica'),
@@ -111,7 +115,8 @@ INSERT INTO qualificacao (nome_qualificacao, descricao) VALUES
 ('Inglês Técnico', 'Línguas'),
 ('Gestão de Projetos', 'Gestão');
 
-INSERT INTO candidato_qualificacao (nivel) VALUES
+INSERT INTO candidato_qualificacao (nivel) 
+VALUES
 ('Avançado'),
 ('Intermediário'),
 ('Avançado'),
@@ -123,7 +128,8 @@ INSERT INTO candidato_qualificacao (nivel) VALUES
 ('Intermediário'),
 ('Iniciante');
 
-INSERT INTO vaga_qualificacao (nivel_minimo) VALUES
+INSERT INTO vaga_qualificacao (nivel_minimo) 
+VALUES
 ('Avançado'), 
 ('Intermediário'), 
 ('Avançado'), 
@@ -135,7 +141,8 @@ INSERT INTO vaga_qualificacao (nivel_minimo) VALUES
 ('Intermediário'),
 ('Intermediário');
 
-INSERT INTO experiencia_profissional (empresa, data_inicio, data_fim, descricao) VALUES
+INSERT INTO experiencia_profissional (empresa, data_inicio, data_fim, descricao) 
+VALUES
 ('SoftSystems Portugal', '2022-03-01', '2024-05-31', 'Desenvolvimento de APIs RESTful e manutenção de bases de dados SQL Server.'),
 ('Inovação Digital Tech', '2024-06-01', NULL, 'Construção de arquiteturas orientadas a objetos e otimização de consultas SQL.'),
 ('DataCorp Consultoria', '2018-01-15', '2022-12-31', 'Tratamento de dados, criação de dashboards e modelação preditiva.'),
@@ -147,7 +154,8 @@ INSERT INTO experiencia_profissional (empresa, data_inicio, data_fim, descricao)
 ('Logística & Automação S.A.', '2020-10-01', NULL, 'Implementação de sistemas automatizados e controlo de qualidade fabril.'),
 ('Estúdio Criativo Web', '2022-07-01', '2024-06-30', 'Criação de wireframes, prototipagem de interfaces e condução de testes de usabilidade.');
 
-INSERT INTO formacao (instituicao, curso, grau, data_inicio, data_fim) VALUES
+INSERT INTO formacao (instituicao, curso, grau, data_inicio, data_fim) 
+VALUES
 ('IEFP - Instituto do Emprego e Formação Profissional', 'Técnico/a de Desenvolvimento de Software', 'Nível 5 (CTeSP/Técnico)', '2025-09-15', NULL),
 ('Universidade de Coimbra', 'Engenharia Informática', 'Licenciatura', '2019-09-01', '2022-06-30'),
 ('Universidade do Porto', 'Ciência de Dados e Estatística', 'Mestrado', '2016-09-01', '2018-07-15'),
@@ -159,7 +167,8 @@ INSERT INTO formacao (instituicao, curso, grau, data_inicio, data_fim) VALUES
 ('Instituto Superior Técnico', 'Engenharia Eletrotécnica e de Computadores', 'Mestrado Integrado', '2014-09-01', '2019-07-20'),
 ('Instituto Politécnico do Porto', 'Design de Comunicação e Multimédia', 'Licenciatura', '2018-09-01', '2021-06-30');
 
-INSERT INTO historico_candidatura(data_alteracao, observacao) VALUES
+INSERT INTO historico_candidatura (data_alteracao, observacao) 
+VALUES
 ('2026-08-05 09:15:00', 'Candidatura submetida com sucesso pelo portal de recrutamento.'),
 ('2026-08-06 14:20:00', 'CV validado pelos recursos humanos e encaminhado para a chefia técnica.'),
 ('2026-08-08 11:00:00', 'Candidatura registada e validada para triagem inicial.'),
