@@ -141,3 +141,7 @@ FOREIGN KEY (id_estado) REFERENCES estado_candidatura(id_estado),
 data_alteracao DATE,
 observacao VARCHAR (100)
 );
+
+
+
+OK
