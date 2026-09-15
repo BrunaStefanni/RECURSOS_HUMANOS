@@ -63,3 +63,110 @@ VALUES
 ('Engenheiro de Automação', 'Programação de PLCs e acompanhamento de processos industriais automatizados.', '2026-08-25', '2026-10-15', 2200.00, 3000.00, 'Sem Termo'),
 ('UX/UI Designer', 'Prototipagem de ecrãs, realização de testes de usabilidade e design de produto.', '2026-08-28', '2026-09-30', 1700.00, 2300.00, 'A Termo Certo');
 
+INSERT INTO estado_candidatura (descricao) VALUES
+('Recebida'),
+('Em Análise'),
+('Triagem Telefónica'),
+('Entrevista Técnica Agendada'),
+('Entrevista RH Agendada'),
+('Em Avaliação Final'),
+('Proposta Enviada'),
+('Aprovada / Contratado'),
+('Rejeitada'),
+('Candidato Desistiu');
+
+INSERT INTO candidatura (data_candidatura, salario_pretendido, carta_apresentacao) VALUES
+('2026-08-05', 2800.00, 'Tenho sólida experiência em desenvolvimento C# e bases de dados SQL Server, com interesse em arquiteturas orientadas a objetos.'),
+('2026-08-08', 2100.00, 'Tenho grande interesse em aplicar modelação preditiva e análise de dados para otimização de processos de negócio.'),
+('2026-08-10', 2300.00, 'Apresento vasta experiência no processamento e análise estatística de dados complexos em R, além de metodologia rigorosa.'),
+('2026-08-11', 1250.00, 'Procuro uma oportunidade para aplicar os meus conhecimentos na administração de sistemas Linux e redes em ambiente fabril.'),
+('2026-08-23', 2000.00, 'Com formação na área ambiental e anos de gestão de equipas, posso acrescentar rigor e planeamento aos projetos da empresa.'),
+('2026-08-15', 3200.00, 'Lidero equipas multidisciplinares no setor da saúde há vários anos e tenho interesse em impulsionar o projeto HealthTech.'),
+('2026-08-21', 1100.00, 'Entusiasta pelo contacto humano e recrutamento técnico, gostaria de integrar a equipa de RH para dinamizar triagens de perfis.'),
+('2026-08-26', 2500.00, 'Possuo forte bagagem técnica em sistemas automatizados e procura constante por otimização de processos industriais.'),
+('2026-08-29', 1900.00, 'Foco a minha atuação na criação de protótipos funcionais e na melhoria contínua da experiência do utilizador.'),
+('2026-08-14', 3000.00, 'Apresento sólidos conhecimentos de engenharia de software e interesse em evoluir na criação de serviços de alto desempenho.');
+
+INSERT INTO entrevista (data_entrevista, tipo, observacoes, avaliacao) VALUES
+('2026-08-12 10:00:00', 'Técnica', 'Demonstrou forte domínio de Programação Orientada a Objetos em C# e boas práticas de arquitetura SQL.', 5),
+('2026-08-14 14:30:00', 'Presencial', 'Apresentou excelente raciocínio lógico e experiência sólida em análise preditiva de dados.', 4),
+('2026-08-18 11:00:00', 'Online', 'Perfil com rigor metodológico exemplar e grande autonomia em processamento estatístico de dados.', 5),
+('2026-08-19 15:00:00', 'Presencial', 'Bons conhecimentos em comandos e administração Linux. Demonstrou boa atitude e vontade de aprender.', 4),
+('2026-08-27 09:30:00', 'Online', 'Sólida experiência em gestão ambiental e facilidade de comunicação. Alinhada com a cultura da empresa.', 4),
+('2026-08-20 16:00:00', 'Presencial', 'Perfil lider e estruturado. Apresentou visões claras sobre gestão de equipas no setor da saúde.', 5),
+('2026-08-24 10:30:00', 'Online', 'Conhece bem os processos de RH, mas o perfil pretendido exige maior apetência para triagem técnica intensiva.', 3),
+('2026-08-28 14:00:00', 'Técnica', 'Conhecimentos práticos sólidos de automação e instrumentação industrial. Boa capacidade de resolução de problemas.', 4),
+('2026-09-02 11:30:00', 'Online', 'Apresentou um portfólio de UX/UI consistente, com boa fundamentação em testes de usabilidade.', 4),
+('2026-08-17 15:30:00', 'Técnica', 'Respondeu bem às questões teóricas de engenharia de software, contudo o perfil de pretensão salarial ficou desalinhado.', 3);
+
+INSERT INTO qualificacao (nome_qualificacao, descricao) VALUES
+('Programação C#', 'Técnica'),
+('SQL & Modelação de Dados', 'Técnica'),
+('Análise Estatística em R', 'Técnica'),
+('Administração de Sistemas Linux', 'Técnica'),
+('Trabalho em Equipa', 'Comportamental'),
+('Comunicação Interpessoal', 'Comportamental'),
+('Gestão do Tempo e Organização', 'Comportamental'),
+('Resolução de Problemas', 'Comportamental'),
+('Inglês Técnico', 'Línguas'),
+('Gestão de Projetos', 'Gestão');
+
+INSERT INTO candidato_qualificacao (nivel) VALUES
+('Avançado'),
+('Intermediário'),
+('Avançado'),
+('Avançado'),
+('Avançado'),
+('Intermediário'),
+('Avançado'),
+('Avançado'),
+('Intermediário'),
+('Iniciante');
+
+INSERT INTO vaga_qualificacao (nivel_minimo) VALUES
+('Avançado'), 
+('Intermediário'), 
+('Avançado'), 
+('Intermediário'), 
+('Avançado'), 
+('Intermediário'),
+('Avançado'),
+('Avançado'),
+('Intermediário'),
+('Intermediário');
+
+INSERT INTO experiencia_profissional (empresa, data_inicio, data_fim, descricao) VALUES
+('SoftSystems Portugal', '2022-03-01', '2024-05-31', 'Desenvolvimento de APIs RESTful e manutenção de bases de dados SQL Server.'),
+('Inovação Digital Tech', '2024-06-01', NULL, 'Construção de arquiteturas orientadas a objetos e otimização de consultas SQL.'),
+('DataCorp Consultoria', '2018-01-15', '2022-12-31', 'Tratamento de dados, criação de dashboards e modelação preditiva.'),
+('Instituto BioSaúde', '2019-09-01', '2024-08-31', 'Análise estatística de dados biológicos utilizando R e processamento de dados experimentais.'),
+('Rede Global Serviços', '2023-01-10', NULL, 'Administração básica de servidores Linux, redes e atendimento ao utilizador.'),
+('Consultoria Sustentável', '2016-04-01', '2023-11-30', 'Coordenação de equipas multidisciplinares e submissão de relatórios ambientais.'),
+('HealthTech Solutions', '2015-02-01', NULL, 'Planeamento e liderança de projetos tecnológicos focados na área da saúde.'),
+('RH Conecta', '2021-05-15', '2024-01-31', 'Triagem de perfis técnicos, agendamento de entrevistas e contacto com candidatos.'),
+('Logística & Automação S.A.', '2020-10-01', NULL, 'Implementação de sistemas automatizados e controlo de qualidade fabril.'),
+('Estúdio Criativo Web', '2022-07-01', '2024-06-30', 'Criação de wireframes, prototipagem de interfaces e condução de testes de usabilidade.');
+
+INSERT INTO formacao (instituicao, curso, grau, data_inicio, data_fim) VALUES
+('IEFP - Instituto do Emprego e Formação Profissional', 'Técnico/a de Desenvolvimento de Software', 'Nível 5 (CTeSP/Técnico)', '2025-09-15', NULL),
+('Universidade de Coimbra', 'Engenharia Informática', 'Licenciatura', '2019-09-01', '2022-06-30'),
+('Universidade do Porto', 'Ciência de Dados e Estatística', 'Mestrado', '2016-09-01', '2018-07-15'),
+('Universidade de Lisboa', 'Biologia', 'Doutoramento', '2018-09-01', '2022-11-20'),
+('Instituto Politécnico de Leiria', 'Redes e Sistemas Informáticos', 'Licenciatura', '2020-09-01', '2023-06-30'),
+('Universidade de Aveiro', 'Engenharia do Ambiente', 'Mestrado', '2011-09-01', '2016-06-25'),
+('Universidade do Minho', 'Gestão de Sistemas de Informação', 'Licenciatura', '2010-09-01', '2014-06-30'),
+('Universidade Católica Portuguesa', 'Gestão de Recursos Humanos', 'Licenciatura', '2017-09-01', '2020-07-10'),
+('Instituto Superior Técnico', 'Engenharia Eletrotécnica e de Computadores', 'Mestrado Integrado', '2014-09-01', '2019-07-20'),
+('Instituto Politécnico do Porto', 'Design de Comunicação e Multimédia', 'Licenciatura', '2018-09-01', '2021-06-30');
+
+INSERT INTO historico_candidatura(data_alteracao, observacao) VALUES
+('2026-08-05 09:15:00', 'Candidatura submetida com sucesso pelo portal de recrutamento.'),
+('2026-08-06 14:20:00', 'CV validado pelos recursos humanos e encaminhado para a chefia técnica.'),
+('2026-08-08 11:00:00', 'Candidatura registada e validada para triagem inicial.'),
+('2026-08-10 16:30:00', 'Entrevista presencial agendada com o departamento de analítica.'),
+('2026-08-10 10:00:00', 'Receção do processo e verificação de requisitos académicos e profissionais.'),
+('2026-08-11 08:45:00', 'Submissão de candidatura recebida pelo sistema.'),
+('2026-08-15 17:10:00', 'Candidato aprovado no processo seletivo e proposta de contrato emitida.'),
+('2026-08-23 13:00:00', 'Candidatura inserida na base de dados para avaliação curricular.'),
+('2026-08-15 15:00:00', 'Candidatura recebida para o projeto HealthTech.'),
+('2026-08-18 09:30:00', 'Entrevista de liderança confirmada com a gestão de topo.');
