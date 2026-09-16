@@ -1,3 +1,5 @@
+/* ATENÇÃO: Este ficheiro contém dados fictícios para fins de teste e demonstração. */
+
 INSERT INTO candidato (nome_candidato, email, telefone, data_nascimento, data_registro)
 VALUES 
 ('Ana Beatriz Silva', 'ana.silva@emailficticio.com', '(11) 98765-4321', '1992-04-15', '2026-01-10'),
@@ -10,6 +12,8 @@ VALUES
 ('Rodrigo Ferreira Lima', 'rodrigo.lima@emailficticio.com', '(81) 98333-4455', '1993-01-08', '2026-02-05'),
 ('Beatriz Mendes Castro', 'beatriz.castro@emailficticio.com', '(85) 99444-5566', '1997-05-14', '2026-02-10'),
 ('Thiago Henrique Souza', 'thiago.souza@emailficticio.com', '(19) 98555-6677', '1989-10-02', '2026-02-12');
+
+/* Durante a inserção de dados, foi preciso fazer alterações no formato de alguns dados */
 
 INSERT INTO empresa (nome_empresa, nif, email, telefone, website)
 VALUES
