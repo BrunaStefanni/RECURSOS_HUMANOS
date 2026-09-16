@@ -91,16 +91,17 @@ VALUES
 
 INSERT INTO entrevista (data_entrevista, tipo, observacoes, avaliacao) 
 VALUES
-('2026-08-12 10:00:00', 'Técnica', 'Demonstrou forte domínio de Programação Orientada a Objetos em C# e boas práticas de arquitetura SQL.', 5),
-('2026-08-14 14:30:00', 'Presencial', 'Apresentou excelente raciocínio lógico e experiência sólida em análise preditiva de dados.', 4),
-('2026-08-18 11:00:00', 'Online', 'Perfil com rigor metodológico exemplar e grande autonomia em processamento estatístico de dados.', 5),
-('2026-08-19 15:00:00', 'Presencial', 'Bons conhecimentos em comandos e administração Linux. Demonstrou boa atitude e vontade de aprender.', 4),
-('2026-08-27 09:30:00', 'Online', 'Sólida experiência em gestão ambiental e facilidade de comunicação. Alinhada com a cultura da empresa.', 4),
-('2026-08-20 16:00:00', 'Presencial', 'Perfil lider e estruturado. Apresentou visões claras sobre gestão de equipas no setor da saúde.', 5),
-('2026-08-24 10:30:00', 'Online', 'Conhece bem os processos de RH, mas o perfil pretendido exige maior apetência para triagem técnica intensiva.', 3),
-('2026-08-28 14:00:00', 'Técnica', 'Conhecimentos práticos sólidos de automação e instrumentação industrial. Boa capacidade de resolução de problemas.', 4),
-('2026-09-02 11:30:00', 'Online', 'Apresentou um portfólio de UX/UI consistente, com boa fundamentação em testes de usabilidade.', 4),
-('2026-08-17 15:30:00', 'Técnica', 'Respondeu bem às questões teóricas de engenharia de software, contudo o perfil de pretensão salarial ficou desalinhado.', 3);
+('2026-08-12', 'Técnica', 'Demonstrou forte domínio de Programação Orientada a Objetos em C# e boas práticas de arquitetura SQL.', 5),
+('2026-08-14', 'Presencial', 'Apresentou excelente raciocínio lógico e experiência sólida em análise preditiva de dados.', 4),
+('2026-08-18', 'Online', 'Perfil com rigor metodológico exemplar e grande autonomia em processamento estatístico de dados.', 5),
+('2026-08-19', 'Presencial', 'Bons conhecimentos em comandos e administração Linux. Demonstrou boa atitude e vontade de aprender.', 4),
+('2026-08-27', 'Online', 'Sólida experiência em gestão ambiental e facilidade de comunicação. Alinhada com a cultura da empresa.', 4),
+('2026-08-20', 'Presencial', 'Perfil lider e estruturado. Apresentou visões claras sobre gestão de equipas no setor da saúde.', 5),
+('2026-08-24', 'Online', 'Conhece bem os processos de RH, mas o perfil pretendido exige maior apetência para triagem técnica intensiva.', 3),
+('2026-08-28', 'Técnica', 'Conhecimentos práticos sólidos de automação e instrumentação industrial. Boa capacidade de resolução de problemas.', 4),
+('2026-09-02', 'Online', 'Apresentou um portfólio de UX/UI consistente, com boa fundamentação em testes de usabilidade.', 4),
+('2026-08-17', 'Técnica', 'Respondeu bem às questões teóricas de engenharia de software, contudo o perfil de pretensão salarial ficou desalinhado.', 3);
+
 
 INSERT INTO qualificacao (nome_qualificacao, descricao) 
 VALUES
