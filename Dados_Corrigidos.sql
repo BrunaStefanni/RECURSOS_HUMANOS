@@ -277,3 +277,44 @@ WHERE id_vaga = 10;
 
 /* Fim da inserção de dados */
 
+INSERT INTO experiencia_profissional (id_candidato, empresa, data_inicio, data_fim, descricao)
+VALUES
+(1, 'SoftSystems Portugal', '2022-03-01', '2024-05-31', 'Desenvolvimento de APIs RESTful e manutenção de bases de dados SQL Server.'),
+(2, 'Inovação Digital Tech', '2024-06-01', NULL, 'Construção de arquiteturas orientadas a objetos e otimização de consultas SQL.'),
+(3, 'DataCorp Consultoria', '2018-01-15', '2022-12-31', 'Tratamento de dados, criação de dashboards e modelação preditiva.'),
+(4, 'Instituto BioSaúde', '2019-09-01', '2024-08-31', 'Análise estatística de dados biológicos utilizando R e processamento de dados experimentais.'),
+(5, 'Rede Global Serviços', '2023-01-10', NULL, 'Administração básica de servidores Linux, redes e atendimento ao utilizador.'),
+(6, 'Consultoria Sustentável', '2016-04-01', '2023-11-30', 'Coordenação de equipas multidisciplinares e submissão de relatórios ambientais.'),
+(7, 'HealthTech Solutions', '2015-02-01', NULL, 'Planeamento e liderança de projetos tecnológicos focados na área da saúde.'),
+(8, 'RH Conecta', '2021-05-15', '2024-01-31', 'Triagem de perfis técnicos, agendamento de entrevistas e contacto com candidatos.'),
+(9, 'Logística & Automação S.A.', '2020-10-01', NULL, 'Implementação de sistemas automatizados e controlo de qualidade fabril.'),
+(10, 'Estúdio Criativo Web', '2022-07-01', '2024-06-30', 'Criação de wireframes, prototipagem de interfaces e condução de testes de usabilidade.');
+
+ALTER TABLE formacao
+MODIFY grau VARCHAR(50);
+
+INSERT INTO formacao (id_candidato, instituicao, curso, grau, data_inicio, data_fim)
+VALUES
+(1, 'IEFP - Instituto do Emprego e Formação Profissional', 'Técnico/a de Desenvolvimento de Software', 'Nível 5 (CTeSP/Técnico)', '2025-09-15', NULL),
+(2, 'Universidade de Coimbra', 'Engenharia Informática', 'Licenciatura', '2019-09-01', '2022-06-30'),
+(3, 'Universidade do Porto', 'Ciência de Dados e Estatística', 'Mestrado', '2016-09-01', '2018-07-15'),
+(4, 'Universidade de Lisboa', 'Biologia', 'Doutoramento', '2018-09-01', '2022-11-20'),
+(5, 'Instituto Politécnico de Leiria', 'Redes e Sistemas Informáticos', 'Licenciatura', '2020-09-01', '2023-06-30'),
+(6, 'Universidade de Aveiro', 'Engenharia do Ambiente', 'Mestrado', '2011-09-01', '2016-06-25'),
+(7, 'Universidade do Minho', 'Gestão de Sistemas de Informação', 'Licenciatura', '2010-09-01', '2014-06-30'),
+(8, 'Universidade Católica Portuguesa', 'Gestão de Recursos Humanos', 'Licenciatura', '2017-09-01', '2020-07-10'),
+(9, 'Instituto Superior Técnico', 'Engenharia Eletrotécnica e de Computadores', 'Mestrado Integrado', '2014-09-01', '2019-07-20'),
+(10, 'Instituto Politécnico do Porto', 'Design de Comunicação e Multimédia', 'Licenciatura', '2018-09-01', '2021-06-30');
+
+INSERT INTO historico_candidatura (id_candidatura, id_estado, data_alteracao, observacao)
+VALUES
+(1, 1, '2026-08-05', 'Candidatura submetida com sucesso pelo portal de recrutamento.'),
+(2, 2, '2026-08-06', 'CV validado pelos recursos humanos e encaminhado para a chefia técnica.'),
+(3, 3, '2026-08-08', 'Candidatura registada e validada para triagem inicial.'),
+(4, 4, '2026-08-10', 'Entrevista presencial agendada com o departamento de analítica.'),
+(5, 1, '2026-08-10', 'Receção do processo e verificação de requisitos académicos e profissionais.'),
+(6, 1, '2026-08-11', 'Submissão de candidatura recebida pelo sistema.'),
+(7, 7, '2026-08-15', 'Candidato aprovado no processo seletivo e proposta de contrato emitida.'),
+(8, 2, '2026-08-23', 'Candidatura inserida na base de dados para avaliação curricular.'),
+(9, 1, '2026-08-15', 'Candidatura recebida para o projeto HealthTech.'),
+(10, 5, '2026-08-18', 'Entrevista de liderança confirmada com a gestão de topo.');
