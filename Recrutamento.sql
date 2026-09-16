@@ -99,8 +99,8 @@ nivel VARCHAR (50)
 PRIMARY KEY (id_candidato, id_qualificacao)
 );
 
-// O CHAT sugeriu que houvesse uma PK composta entre id_candidato e id_qualificacao//
-// O código então ficaria assim: PRIMARY KEY (id_candidato, id_qualificacao) //
+/* O código então ficaria assim: PRIMARY KEY (id_candidato, id_qualificacao), MAS... */
+/*FORAM ALTERADAS AS DUAS TABELAS VAGA_QUALIFICACAO E CANDIDATO_QUALIFICACAO PARA UMA ESTRUTURA MAIS SIMPLES */
 
 CREATE TABLE vaga_qualificacao(
 id_vaga INT,
