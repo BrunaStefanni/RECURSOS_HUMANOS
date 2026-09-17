@@ -1,5 +1,5 @@
 # **RECURSOS_HUMANOS**
-Repositório para desenvolvimento de projeto para trabalho em grupo do curso TDS. 
+Repositório para desenvolvimento de projeto como trabalho em grupo do curso TDS.
 
 ## Criação de Tabelas
 Alimentando as tabelas com as informações que cada uma carregará 
@@ -16,7 +16,7 @@ Este trabalho consiste na construção de uma base de dados em SQL e sua impleme
 
 
 
-# Diagrama Entidade-Relacionamento — Next People
+# **Diagrama Entidade-Relacionamento — Next People**
 
 ```mermaid
 graph TD
