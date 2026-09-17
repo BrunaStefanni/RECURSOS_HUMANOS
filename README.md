@@ -1,4 +1,4 @@
-# RECURSOS_HUMANOS
+# **RECURSOS_HUMANOS**
 Repositório para desenvolvimento de projeto para trabalho em grupo do curso TDS. 
 
 ## Criação de Tabelas
@@ -10,6 +10,6 @@ Este trabalho consiste na construção de uma base de dados em SQL e sua impleme
 
 ## Autores
 
-Bruna Leite
-Tatiane Medeiros
-Gabriela Viana
+* Bruna Leite
+* Tatiane Medeiros
+* Gabriela Viana
