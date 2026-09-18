@@ -277,21 +277,12 @@ WHERE id_vaga = 10;
 
 /* Fim da inserção de dados */
 
-INSERT INTO experiencia_profissional (id_candidato, empresa, data_inicio, data_fim, descricao)
-VALUES
-(1, 'SoftSystems Portugal', '2022-03-01', '2024-05-31', 'Desenvolvimento de APIs RESTful e manutenção de bases de dados SQL Server.'),
-(2, 'Inovação Digital Tech', '2024-06-01', NULL, 'Construção de arquiteturas orientadas a objetos e otimização de consultas SQL.'),
-(3, 'DataCorp Consultoria', '2018-01-15', '2022-12-31', 'Tratamento de dados, criação de dashboards e modelação preditiva.'),
-(4, 'Instituto BioSaúde', '2019-09-01', '2024-08-31', 'Análise estatística de dados biológicos utilizando R e processamento de dados experimentais.'),
-(5, 'Rede Global Serviços', '2023-01-10', NULL, 'Administração básica de servidores Linux, redes e atendimento ao utilizador.'),
-(6, 'Consultoria Sustentável', '2016-04-01', '2023-11-30', 'Coordenação de equipas multidisciplinares e submissão de relatórios ambientais.'),
-(7, 'HealthTech Solutions', '2015-02-01', NULL, 'Planeamento e liderança de projetos tecnológicos focados na área da saúde.'),
-(8, 'RH Conecta', '2021-05-15', '2024-01-31', 'Triagem de perfis técnicos, agendamento de entrevistas e contacto com candidatos.'),
-(9, 'Logística & Automação S.A.', '2020-10-01', NULL, 'Implementação de sistemas automatizados e controlo de qualidade fabril.'),
-(10, 'Estúdio Criativo Web', '2022-07-01', '2024-06-30', 'Criação de wireframes, prototipagem de interfaces e condução de testes de usabilidade.');
-
 ALTER TABLE formacao
-MODIFY grau VARCHAR(50);
+MODIFY grau VARCHAR(100);
+DESCRIBE formacao;
+ALTER TABLE formacao
+MODIFY instituicao VARCHAR(100);
+
 
 INSERT INTO formacao (id_candidato, instituicao, curso, grau, data_inicio, data_fim)
 VALUES
@@ -318,3 +309,5 @@ VALUES
 (8, 2, '2026-08-23', 'Candidatura inserida na base de dados para avaliação curricular.'),
 (9, 1, '2026-08-15', 'Candidatura recebida para o projeto HealthTech.'),
 (10, 5, '2026-08-18', 'Entrevista de liderança confirmada com a gestão de topo.');
+
+/* fim da inserção de dados parte 2 */
