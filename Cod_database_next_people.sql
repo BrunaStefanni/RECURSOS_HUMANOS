@@ -4,7 +4,11 @@ USE next_people;
 /* Criação de base de dados para trabalho de SQL - Empresa de RH Next People */
 
 CREATE TABLE candidato(
+<<<<<<< HEAD
 id_candidato INT PRIMARY KEY AUTO_INCREMENT = 1,
+=======
+id_candidato INT PRIMARY KEY AUTO_INCREMENT,
+>>>>>>> origin/Insert-Dados
 nome_candidato VARCHAR (50),
 email VARCHAR (50),
 telefone VARCHAR (50),
@@ -58,7 +62,11 @@ FOREIGN KEY (id_localizacao) REFERENCES localizacao(id_localizacao)
 );
 
 CREATE TABLE estado_candidatura(
+<<<<<<< HEAD
 id_estado INT PRIMARY KEY AUTO_INCREMENT,
+=======
+id_estado INT PRIMARY KEY AUTO_INCREMENT = 1,
+>>>>>>> origin/Insert-Dados
 descricao VARCHAR (50)
 );
 
@@ -113,7 +121,11 @@ FOREIGN KEY (id_qualificacao) REFERENCES qualificacao(id_qualificacao)
 );
 
 CREATE TABLE experiencia_profissional(
+<<<<<<< HEAD
 id_experiencia INT PRIMARY KEY AUTO_INCREMENT = 1,
+=======
+id_experiencia INT PRIMARY KEY AUTO_INCREMENT = 1  ,
+>>>>>>> origin/Insert-Dados
 id_candidato INT,
 empresa VARCHAR (50),
 data_inicio DATE,
@@ -144,4 +156,8 @@ observacao VARCHAR (100),
 
 FOREIGN KEY (id_candidatura) REFERENCES candidatura(id_candidatura),
 FOREIGN KEY (id_estado) REFERENCES estado_candidatura(id_estado)
+<<<<<<< HEAD
 );
+=======
+);<
+>>>>>>> origin/Insert-Dados
