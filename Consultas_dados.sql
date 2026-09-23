@@ -23,6 +23,45 @@ WHERE tipo_contrato = 'Sem Termo';
 
 SELECT * FROM vagas_contrato_sem_termo_por_distrito; 
 
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»GROUP BY (DISTINCT)»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/* Quantos candidatos distintos se candidataram a cada vaga? */
+SELECT v.id_vaga, v.titulo, COUNT(DISTINCT c.id_candidato) AS total_candidatos_distintos
+FROM vaga v
+JOIN candidatura c ON c.id_vaga = v.id_vaga
+GROUP BY v.id_vaga, v.titulo;
+
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»GROUP BY (COM CRITÈRIOS)»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/* Quais vagas receberam mais de 3 candidaturas? */
+
+SELECT v.id_vaga, v.titulo, COUNT(c.id_candidatura) AS total_candidaturas
+FROM vaga v
+JOIN candidatura c ON c.id_vaga = v.id_vaga
+GROUP BY v.id_vaga, v.titulo
+HAVING COUNT(c.id_candidatura) > 3;
+
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»NOT IN»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/* Quais empresas parceiras ainda não publicaram nenhuma vaga no sistema? */
+
+SELECT e.nome_empresa, e.email, e.telefone
+FROM empresa e
+WHERE e.id_empresa NOT IN(SELECT v.id_empresa FROM vaga v);
+
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»SUBQUERY»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/*Que outros candidatos se candidataram à mesma vaga que a Ana Beatriz Silva?*/
+
+SELECT c.nome_candidato, v.titulo
+FROM candidatura ca
+INNER JOIN candidato c
+    ON ca.id_candidato = c.id_candidato
+INNER JOIN vaga v
+    ON ca.id_vaga = v.id_vaga
+WHERE ca.id_vaga IN(SELECT ca2.id_vaga
+                     FROM candidatura ca2
+                     INNER JOIN candidato c2
+                         ON ca2.id_candidato = c2.id_candidato
+                     WHERE c2.nome_candidato = 'Ana Beatriz Silva')
+AND c.nome_candidato <> 'Ana Beatriz Silva';
+
 /*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»MAX/MIN»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
 /* Qual o salário mais alto e o salário mais baixo oferecidos entre todas as vagas publicadas?*/
 
@@ -61,3 +100,28 @@ INNER JOIN recrutador r
 WHERE l.distrito = 'Porto'
 AND r.nome_recrutador = 'Inês Filipa Pereira'
 AND v.id_vaga NOT IN(SELECT id_vaga FROM candidatura); 
+
+
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»IF»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/* Quais candidatos foram aprovados na entrevista e quais precisam de reavaliação, com base na nota atribuída?
+considere nota>= 4 aprovado e caso contrário reavaliação*/
+
+
+SELECT c.nome_candidato, v.titulo, e.tipo AS tipo_entrevista, e.avaliacao,
+       IF(e.avaliacao >= 4, 'Aprovado', 'A reavaliar') AS resultado_entrevista
+FROM entrevista e
+INNER JOIN candidatura ca
+    ON e.id_candidatura = ca.id_candidatura
+INNER JOIN candidato c
+    ON ca.id_candidato = c.id_candidato
+INNER JOIN vaga v
+    ON ca.id_vaga = v.id_vaga
+ORDER BY e.avaliacao DESC;
+
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»SUBQUERY + CÁLCULO»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/* Quais vagas oferecem um salário máximo acima da média de todas as vagas? */
+SELECT id_vaga, titulo, salario_max
+FROM vaga
+WHERE salario_max > (
+    SELECT AVG(salario_max) FROM vaga
+);
