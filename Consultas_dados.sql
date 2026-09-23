@@ -76,15 +76,15 @@ das vagas que ela gere, ainda estão em aberto?*/
 SELECT c.nome_candidato, v.titulo, ec.descricao AS estado, 'Candidatura em aberto' AS situacao
 FROM candidatura ca
 INNER JOIN candidato c
-    ON ca.id_candidato = c.id_candidato
+ON ca.id_candidato = c.id_candidato
 INNER JOIN vaga v
-    ON ca.id_vaga = v.id_vaga
+ON ca.id_vaga = v.id_vaga
 INNER JOIN estado_candidatura ec
-    ON ca.id_estado = ec.id_estado
+ON ca.id_estado = ec.id_estado
 INNER JOIN localizacao l
-    ON v.id_localizacao = l.id_localizacao
+ON v.id_localizacao = l.id_localizacao
 INNER JOIN recrutador r
-    ON v.id_recrutador = r.id_recrutador
+ON v.id_recrutador = r.id_recrutador
 WHERE l.distrito = 'Porto'
 AND r.nome_recrutador = 'Inês Filipa Pereira'
 AND ec.descricao NOT IN('Aprovada / Contratado', 'Rejeitada', 'Candidato Desistiu')
@@ -94,28 +94,28 @@ UNION
 SELECT NULL AS nome_candidato, v.titulo, NULL AS estado, 'Vaga sem candidaturas' AS situacao
 FROM vaga v
 INNER JOIN localizacao l
-    ON v.id_localizacao = l.id_localizacao
+ON v.id_localizacao = l.id_localizacao
 INNER JOIN recrutador r
-    ON v.id_recrutador = r.id_recrutador
+ON v.id_recrutador = r.id_recrutador
 WHERE l.distrito = 'Porto'
 AND r.nome_recrutador = 'Inês Filipa Pereira'
 AND v.id_vaga NOT IN(SELECT id_vaga FROM candidatura); 
 
 
-/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»IF»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
+/*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»IF»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/  
 /* Quais candidatos foram aprovados na entrevista e quais precisam de reavaliação, com base na nota atribuída?
 considere nota>= 4 aprovado e caso contrário reavaliação*/
 
 
 SELECT c.nome_candidato, v.titulo, e.tipo AS tipo_entrevista, e.avaliacao,
-       IF(e.avaliacao >= 4, 'Aprovado', 'A reavaliar') AS resultado_entrevista
+IF(e.avaliacao >= 4, 'Aprovado', 'A reavaliar') AS resultado_entrevista
 FROM entrevista e
 INNER JOIN candidatura ca
-    ON e.id_candidatura = ca.id_candidatura
+ON e.id_candidatura = ca.id_candidatura
 INNER JOIN candidato c
-    ON ca.id_candidato = c.id_candidato
+ON ca.id_candidato = c.id_candidato
 INNER JOIN vaga v
-    ON ca.id_vaga = v.id_vaga
+ON ca.id_vaga = v.id_vaga
 ORDER BY e.avaliacao DESC;
 
 /*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»SUBQUERY + CÁLCULO»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
