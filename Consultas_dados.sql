@@ -52,14 +52,14 @@ WHERE e.id_empresa NOT IN(SELECT v.id_empresa FROM vaga v);
 SELECT c.nome_candidato, v.titulo
 FROM candidatura ca
 INNER JOIN candidato c
-    ON ca.id_candidato = c.id_candidato
+ON ca.id_candidato = c.id_candidato
 INNER JOIN vaga v
-    ON ca.id_vaga = v.id_vaga
+ON ca.id_vaga = v.id_vaga
 WHERE ca.id_vaga IN(SELECT ca2.id_vaga
-                     FROM candidatura ca2
-                     INNER JOIN candidato c2
-                         ON ca2.id_candidato = c2.id_candidato
-                     WHERE c2.nome_candidato = 'Ana Beatriz Silva')
+FROM candidatura ca2
+INNER JOIN candidato c2
+ON ca2.id_candidato = c2.id_candidato
+WHERE c2.nome_candidato = 'Ana Beatriz Silva')
 AND c.nome_candidato <> 'Ana Beatriz Silva';
 
 /*»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»MAX/MIN»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»*/
